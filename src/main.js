@@ -11,3 +11,8 @@ new Vue({
   template: '<App/>',
   components: { App }
 })
+
+$(document).ready(function(){
+
+  
+})
