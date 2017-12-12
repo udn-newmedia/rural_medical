@@ -10,11 +10,6 @@
         <Share />
       </div>
     </Cover>
-    <div class="menu">
-      <div class="menu-button">醫療資源可近性</div>
-      <div class="menu-button">安寧資源</div>
-      <div class="menu-button">相對論</div>
-    </div>
     <div id="map-contain">
       <div id="map-menu" :class="{open: mapmenu}">
         <div class="item" @click="menuClick(index)" v-for="(item, index) in main">{{item.location}}</div>
@@ -195,29 +190,6 @@ html, body, #app{
   color: #4D4D4D;
   font-size: 18px;
   line-height: 32px;
-}
-
-.menu{
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 20%;
-}
-
-.menu-button{
-  width: 265px;
-  height: 102px;
-  border-radius: 50px;
-  background-color: #EF4326;
-  box-shadow: -2.8px 1.1px 7px 0 rgba(4, 0, 0, 0.05);
-  font-size: 26px;
-  display: inline-block;
-  line-height: 102px;
-  text-align: center;
-  letter-spacing: -0.5px;
-  color: #FFFFFF;
-  margin-top: 30px;
 }
 
 #map-contain{
