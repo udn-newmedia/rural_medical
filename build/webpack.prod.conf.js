@@ -57,12 +57,12 @@ const webpackConfig = merge(baseWebpackConfig, {
         ? { safe: true, map: { inline: false } }
         : { safe: true }
     }),
-    new PrerenderSpaPlugin(
-      // Absolute path to compiled SPA
-      path.join(__dirname, '../dist'),
-      // List of routes to prerender
-      [ '/' ]
-    ),
+    // new PrerenderSpaPlugin(
+    //   // Absolute path to compiled SPA
+    //   path.join(__dirname, '../dist'),
+    //   // List of routes to prerender
+    //   [ '/' ]
+    // ),
     // generate dist index.html with correct asset hash for caching.
     // you can customize output by editing /index.html
     // see https://github.com/ampedandwired/html-webpack-plugin

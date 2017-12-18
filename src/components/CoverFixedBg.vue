@@ -2,6 +2,7 @@
     <div id="cover">
         <slot></slot>
         <div id="back-bg-contain" :style="{opacity: opacity}">
+            <div class="mask" :style="{opacity: maskOpacity}"></div>
             <img class="hidden-md hidden-lg" :src="src" >
             <img class="hidden-xs hidden-sm" :src="srcWeb">
         </div>
@@ -13,8 +14,14 @@ export default {
     props: ['src', 'srcWeb'],
     methods: {
         handleScroll: function(e){
-            let currentH = window.pageYOffset
-            if(currentH < (this.$el.offsetTop + window.innerHeight*2)){
+            var currentH = window.pageYOffset
+            if(currentH < 300 ){
+                this.maskOpacity = 0.6
+            }
+            else{
+                this.maskOpacity = 0.9
+            }
+            if(currentH < (this.$el.offsetTop + window.innerHeight + 400)){
                 this.opacity = 1
             }
             else{
@@ -28,6 +35,7 @@ export default {
     data: function(){
         return{
             opacity: 1,
+            maskOpacity: 0.6
         }
     }
 }
@@ -47,6 +55,14 @@ export default {
         width: 100%;
         height: 100%;
         z-index: -1;
+        transition: opacity 0.7s ease;
+    }
+    .mask{
+        width: 100%;
+        height: 100%;
+        background-color: #FFFFFF;
+        position: absolute;
+        top: 0;
         transition: opacity 0.7s ease;
     }
     h1{
