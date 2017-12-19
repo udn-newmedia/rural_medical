@@ -48,6 +48,18 @@
     <div class="textbox">
       補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字。
     </div>
+     <div class="space"></div>
+    <div class="textbox">
+      補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字。
+    </div>
+    <div class="space"></div>
+    <div class="textbox">
+      補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字。
+    </div>
+    <div class="space"></div>
+    <div class="textbox">
+      補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字補文字。
+    </div>
     <div class="space"></div>
     <Section :src="section3" text="醫生病人相對論為什麼我們等不到彼此？"/>
     <ContentContainer background-color="#FFFFFF">
@@ -159,6 +171,20 @@ export default {
       .attr('id', 'test')
       .attr('class', 'road')
       .attr('d', "M26.5,623.1v-11.3v-13l-11-4c0,0-3.3-5.3,1.8-8.8s13-8,13-8l7.8-10.8c0,0,2.3-12.5,3-15.3s0-10.5,0-10.5l2.3-7.8v-5.8c0,0,6.5-7.3,6.8-15c0.3-7.7,3.5-25,5-27.7s10.2-15.8,10.2-15.8v-8.3c0,0,21.3-25,22.5-26s1.5-13.8,2.3-17.5s-4-8.3-7-11s-6-6-7-11.5s-4-13.5-4.8-19s-1-12,0.8-16.3s3-9.5,3-14.8s-0.8-11.3,1.3-15.5s5.8-11.5,7.5-17s10.8-16.8,12.5-21.5s9.8-20.8,7.5-26s-8.3-6.8-8.8-10.8c-0.5-4-1-9,1.8-12.8s7.3-6.3,9.3-10.8s7-8.5,8.8-9.3s6.5-8.3,6.8-10s5.5-2.3,5-9.8s1.3-11.8,2.3-15.8s4.8-11,4.8-14.8s-3.3-12,2-16.8s8.9-1.3,12.1-2.8c3.2-1.5,14.4-5,15.2-7.5s32.3-51,32.3-51s4.3-5,14.8-12S229,61.9,229,61.9s0.3-7.3,1.5-13.3S253,12.9,253,12.9")
+
+    svg.append('g')
+      .style('transform', 'scale(0.1)translate(1993px, 4244px)')
+      .append('path')
+      .attr('id', 'test2')
+      .attr('class', 'road')
+      .attr('d', "M91.1,561.6l-28.5-11.8c-0.3-0.1-0.5-0.4-0.5-0.8l1.1-13.3c0-0.4-0.2-0.7-0.6-0.8l-28.5-6.1c-0.7-0.2-0.8-1.1-0.1-1.4l8.5-3.6c0.5-0.2,0.6-0.8,0.3-1.2l-21.8-22.7c-0.1-0.1-0.2-0.3-0.2-0.5v-7c0-0.1,0-0.3,0.1-0.4l4.2-6.5c0.1-0.2,0.2-0.4,0.1-0.6l-4.4-13.5c0-0.1-0.1-0.2-0.1-0.2l-4.2-5.6c-0.1-0.2-0.2-0.5-0.1-0.7l7.6-23.2c0-0.1,0-0.2,0-0.3l-1-25.3c0,0,0,0,0-0.1l-2-16.3c0-0.1,0-0.2,0-0.3l3.1-10.6c0-0.1,0.1-0.3,0.2-0.4l6.3-5.6c0.2-0.1,0.2-0.3,0.3-0.5c0-2,0.3-12.2,1.2-14.9c1-3,10-9.5,8.8-11.8c-1.1-2-8.6-2.6-10-2.7c-0.2,0-0.3-0.1-0.4-0.2l-6.7-5.3c-0.2-0.2-0.3-0.4-0.3-0.7c0.3-2.5,2.3-15.4,5.4-15.6c3.1-0.2,18.4,0,21.5,0c0.3,0,0.6-0.2,0.7-0.5l3.5-10.2c0-0.1,0-0.2,0-0.2v-14.8c0-0.2,0.1-0.4,0.2-0.5c1.5-1.7,11.1-12.8,8.8-13.5c-1.9-0.6-4.1-1.9-5-2.5c-0.3-0.2-0.4-0.5-0.3-0.8l4.1-17.3c0-0.1,0.1-0.2,0.2-0.3l8-9.5c0.1-0.1,0.1-0.1,0.1-0.2l4.4-12.2c0-0.1,0-0.2,0-0.3l-0.5-8.2c0-0.1,0-0.2,0-0.3l68.7-191.1c0-0.1,0-0.1,0-0.2l1.2-19.1c0-0.2,0.1-0.5,0.3-0.6L173,10.7c0.5-0.3,1.2,0,1.2,0.6v5.3c0,0.4,0.3,0.8,0.8,0.8h11")
+
+    svg.append('g')
+      .style('transform', 'scale(0.185)translate(623px, 2810px)')
+      .append('path')
+      .attr('id', 'test3')
+      .attr('class', 'road')
+      .attr('d', "M270.5,424.4c0,0,1.1,0.2-9.5-2.5c-10.6-2.7-12.6-4.7-19.3-14c-6.7-9.3-8.5-22-11.9-27.3c-3.4-5.3,0.8-10,0-17.3c-0.8-7.3-9.4-18.5-14.8-25.3c-5.4-6.9-6.9-10.2-4.7-23.3c2.3-13.2-2.7-29-5.9-35.5c-3.2-6.5-4.5-9.4-7-23.2s-7.3-35.1-7.3-35.1s-14.1-24.7-19.8-32.1c-5.7-7.4-7.5-20.5-9.6-33.8S146,124.7,139,118.6c-7-6.1-8-20.7-8.7-26c-0.7-5.3-9.3-19.3-9.3-19.3l-8-10.7l-21.3-9.3L67,39.9L50.3,23.2L17,12.2")
 
     prj = d3.geo.mercator().center([120.971864, 23.400998])
         .scale(7800).translate([svg_w/2, svg_h/2 + 50]);
@@ -694,12 +720,146 @@ export default {
           'cy': function(d){
             return prj([121.31118, 23.2209221])[1]
           },
-          'id': function(d){
-            return '六十石山'
-          },
-          'class': 'point-s',
+          'id': '六十石山',
+          'class': 'point-s map1',
           'r': 2
         })
+
+    svg.append('text')
+        .attr({
+          'x': function(d){
+            return prj([121.6263725, 23.9878102])[0]
+          },
+          'y': function(d){
+            return prj([121.6263725, 23.9878102])[1]
+          },
+          'class': 'svg-text map1',
+        })
+        .text('門諾醫院')
+
+    svg.append('text')
+        .attr({
+          'x': function(d){
+            return prj([121.31118, 23.2209221])[0]
+          },
+          'y': function(d){
+            return prj([121.31118, 23.2209221])[1]
+          },
+          'class': 'svg-text map1',
+        })
+        .text('花蓮六十石山')
+
+    svg.append('circle')
+        .attr({
+          'cx': function(d){
+            return prj([121.2044414, 23.0973841])[0]
+          },
+          'cy': function(d){
+            return prj([121.2044414, 23.0973841])[1]
+          },
+          'id': '金城武樹',
+          'class': 'point-s map2',
+          'r': 2
+        })
+
+    svg.append('text')
+        .attr({
+          'x': function(d){
+            return prj([121.2044414, 23.0973841])[0]
+          },
+          'y': function(d){
+            return prj([121.2044414, 23.0973841])[1]
+          },
+          'class': 'svg-text map2',
+        })
+        .text('金城武樹')
+    
+    svg.append('text')
+        .attr({
+          'x': function(d){
+            return prj([121.1408337, 22.7511439])[0]
+          },
+          'y': function(d){
+            return prj([121.1408337, 22.7511439])[1]
+          },
+          'class': 'svg-text map2',
+        })
+        .text('馬偕醫院')
+
+    svg.append('circle')
+        .attr({
+          'cx': function(d){
+            return prj([120.7979742, 21.9452566])[0]
+          },
+          'cy': function(d){
+            return prj([120.7979742, 21.9452566])[1]
+          },
+          'id': '墾丁大街',
+          'class': 'point-s map3',
+          'r': 2
+        })
+
+    svg.append('text')
+        .attr({
+          'x': function(d){
+            return prj([120.7979742, 21.9452566])[0]
+          },
+          'y': function(d){
+            return prj([120.7979742, 21.9452566])[1]
+          },
+          'class': 'svg-text map3',
+        })
+        .text('墾丁大街')
+    
+    svg.append('text')
+        .attr({
+          'x': function(d){
+            return prj([120.453052, 22.465312])[0]
+          },
+          'y': function(d){
+            return prj([120.453052, 22.465312])[1]
+          },
+          'class': 'svg-text map3',
+        })
+        .text('輔英科大附設醫院')
+
+    svg.append('circle')
+        .attr({
+          'cx': function(d){
+            return prj([120.7979742, 21.9452566])[0]
+          },
+          'cy': function(d){
+            return prj([120.7979742, 21.9452566])[1]
+          },
+          'id': '帝寶',
+          'class': 'point-s map4',
+          'r': 2
+        })
+
+    svg.append('text')
+        .attr({
+          'x': function(d){
+            return prj([120.7979742, 21.9452566])[0]
+          },
+          'y': function(d){
+            return prj([120.7979742, 21.9452566])[1]
+          },
+          'class': 'svg-text map4',
+        })
+        .text('帝寶')
+    
+    svg.append('text')
+        .attr({
+          'x': function(d){
+            return prj([121.518969, 25.0406784])[0]
+          },
+          'y': function(d){
+            return prj([121.518969, 25.0406784])[1]
+          },
+          'class': 'svg-text map4',
+        })
+        .text('台大醫院')
+
 
   },
   methods: {
@@ -723,13 +883,13 @@ export default {
         this.mapShow = false
         circle.transition().attr({'r': 0})
       }
-      else if(map >= window.innerHeight - 200 && map < window.innerHeight * 1.5){
+      else if(map >= window.innerHeight - 200 && map < window.innerHeight * 2){
         this.mapShow = true
         $('.town').css('stroke-opacity', '0')
         $('.leak').css('fill-opacity', '0')
         circle.transition().attr({'r': 2})
       }
-      else if(map >= window.innerHeight * 1.5 && map < window.innerHeight * 2.5){
+      else if(map >= window.innerHeight * 2 && map < window.innerHeight * 3){
         this.mapShow = false
         this.mapScale = false
         this.tooltipShow = false
@@ -738,21 +898,65 @@ export default {
         $('.town').css('stroke-opacity', '1')
         $('.leak').css('fill', '#EF4326')
         $('.leak').css('fill-opacity', '1')
-        $('.point-s').css('fill-opacity', '0')
+        $('.point-s').css('opacity', '0')
         $('#map').css('transform', 'translate(0, 0)')
         circle.transition().attr({'r': 0})
-        $('#test').css('stroke-dashoffset', 723.83642578125)
+        $('.road').css('stroke-dashoffset', '')
+        $('.svg-text').css('opacity', 0)
       }
-      else{
+      else if(map >= window.innerHeight * 3 && map < window.innerHeight * 4){
         this.mapTranslate.x = '-61px'
         this.mapTranslate.y = '-10px'
         this.mapScale = true
         $('.leak').css('fill-opacity', '0')
         $('.town').css('stroke-opacity', '0')
-        $('.point-s').css('fill-opacity', '1')
+        $('.point-s').css('opacity', '0')
         $('.road').css('opacity', 1)
+        $('.point').attr('r', 0)
         $('#臺灣基督教門諾會醫療財團法人門諾醫院').attr('r', 2)
+        $('.road').css('stroke-dashoffset', '')
         $('#test').css('stroke-dashoffset', 0)
+        $('.svg-text').css('opacity', 0)
+        $('.map1').css('opacity', 1)
+      }
+      else if(map >= window.innerHeight * 4 && map < window.innerHeight * 5){
+        this.mapTranslate.x = '-20px'
+        this.mapTranslate.y = '-134px'
+        this.mapScale = true
+        $('.point-s').css('opacity', '0')
+        $('.point').attr('r', 0)
+        $('#馬偕紀念醫院台東分院').attr('r', 2)
+        $('.road').css('stroke-dashoffset', '')
+        $('#test2').css('stroke-dashoffset', 0)
+        $('.svg-text').css('opacity', 0)
+        $('.map2').css('opacity', 1)
+      }
+      else if(map >= window.innerHeight * 5 && map < window.innerHeight * 6){
+        this.mapTranslate.x = '56px'
+        this.mapTranslate.y = '-203px'
+        this.mapScale = true
+        $('.point-s').css('opacity', '0')
+        $('.point').attr('r', 0)
+        $('#輔英科技大學附設醫院').attr('r', 2)
+        $('.road').css('stroke-dashoffset', '')
+        $('#test3').css('stroke-dashoffset', 0)
+        $('.svg-text').css('opacity', 0)
+        $('.map3').css('opacity', 1)
+      }
+      else if(map >= window.innerHeight * 6 && map < window.innerHeight * 7){
+        this.mapTranslate.x = '-78px'
+        this.mapTranslate.y = '153px'
+        this.mapScale = true
+        $('.point-s').css('opacity', '0')
+        $('.point').attr('r', 0)
+        $('#國立台灣大學醫學院附設醫院').attr('r', 2)
+        $('.road').css('stroke-dashoffset', '')
+        $('#test4').css('stroke-dashoffset', 0)
+        $('.svg-text').css('opacity', 0)
+        $('.map4').css('opacity', 1)
+      }
+      else{
+
       }
     },
     expand: function(){
@@ -775,9 +979,27 @@ svg{
   width: 100%;
 }
 
+.svg-text{
+  font-size: 6px;
+  text-anchor: end;
+  transform: translate(-6px, 2px);
+  transition: all 0.7s ease;
+  opacity: 0;
+}
+
 #test{
   stroke-dasharray: 723.83642578125;
   stroke-dashoffset: 723.83642578125;
+}
+
+#test2{
+  stroke-dasharray: 713.1190795898438;
+  stroke-dashoffset: 713.1190795898438;
+}
+
+#test3{
+  stroke-dasharray: 522.3107299804688;
+  stroke-dashoffset: 522.3107299804688;
 }
 
 .road{
@@ -801,7 +1023,7 @@ svg{
 .point-s{
   stroke-width: 0.5;
   fill: #EF4326;
-  fill-opacity: 0;
+  opacity: 0;
 }
 
 .town{
