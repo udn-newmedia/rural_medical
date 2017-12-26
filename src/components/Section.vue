@@ -1,6 +1,6 @@
 <template>
   <div class="section">
-      <img class="lazyload" :data-src="src">
+      <img :src="src">
       <div class="text">{{text}}</div>
   </div>
 </template>

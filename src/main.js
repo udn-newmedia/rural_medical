@@ -14,5 +14,12 @@ new Vue({
 
 $(document).ready(function(){
 
+  var draw = bodymovin.loadAnimation({
+    container: document.getElementById('draw-1'),
+    renderer: 'svg',
+    loop: false,
+    autoplay: true,
+    path: './static/data.json'
+  })
   
 })
