@@ -4,7 +4,7 @@
             <slot></slot>
         </div>
         <div id="icon">
-            <a href="."><img src="https://udn.com/upf/newmedia/image/udn_black.png"></a>
+            <a href="."><img src="https://udn.com/upf/newmedia/2017_data/farewell/src/image/logo.png"></a>
         </div>
         <div id="hbutton" class="squre hidden-lg">
             <div id="nav-icon" :class="{open: isOpen}" @click="handleClick">

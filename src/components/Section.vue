@@ -1,7 +1,8 @@
 <template>
   <div class="section">
-      <img :src="src">
-      <div class="text">{{text}}</div>
+    <img class="hidden-md hidden-lg" :src="src" >
+    <img class="hidden-xs hidden-sm" :src="srcWeb">
+    <div class="text">{{text}}</div>
   </div>
 </template>
 
@@ -17,6 +18,7 @@ export default {
         width: 100%;
         height: 100%;
         position: relative;
+        overflow: hidden;
     }
 
     .section img{

@@ -10,16 +10,28 @@
 </template>
 
 <script>
+
 export default {
     props: ['src', 'srcWeb'],
     methods: {
         handleScroll: function(e){
             var currentH = window.pageYOffset
             if(currentH < 300 ){
-                this.maskOpacity = 0.6
+                if(window.innerWidth > 1024){
+                    this.maskOpacity = 0
+                }
+                else{
+                    this.maskOpacity = 0.6
+                }
+                
             }
             else{
-                this.maskOpacity = 0.9
+                if(window.innerWidth > 1024){
+                    this.maskOpacity = 0.7
+                }
+                else{
+                    this.maskOpacity = 0.9
+                }
             }
             if(currentH < (this.$el.offsetTop + window.innerHeight + 400)){
                 this.opacity = 1
@@ -65,8 +77,13 @@ export default {
         top: 0;
         transition: opacity 0.7s ease;
     }
+    .sub-title{
+        font-size: 28px;
+        color: #616161;
+        letter-spacing: -0.6px;
+    }
     h1{
-        font-size: 55px;
+        font-size: 50px;
         letter-spacing: -1px;
         color: #010101;
         font-weight: bold;
@@ -79,7 +96,7 @@ export default {
     }
     @media screen and (max-width: 767px){
         h1{
-            font-size: 40px;
+            font-size: 45px;
         }
     }
     @media screen and (min-width: 768px) and (max-width: 1024px){

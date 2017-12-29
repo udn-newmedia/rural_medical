@@ -14,12 +14,25 @@ new Vue({
 
 $(document).ready(function(){
 
+  var path
+
+  if(window.innerWidth > 1024){
+    path = './static/web/data.json'
+  }
+  else{
+    path = './static/data.json?v=1'
+  }
+
   var draw = bodymovin.loadAnimation({
     container: document.getElementById('draw-1'),
     renderer: 'svg',
     loop: false,
     autoplay: true,
-    path: './static/data.json'
+    path: path
+  })
+
+  $('.title-button').click(function(){
+    $('html, body').animate({scrollTop : window.innerHeight}, 1000, function(){console.log(123)});
   })
   
 })
