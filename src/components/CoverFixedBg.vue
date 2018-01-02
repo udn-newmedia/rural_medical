@@ -67,6 +67,7 @@ export default {
         width: 100%;
         height: 100%;
         z-index: -1;
+        background: #FFFFFF;
         transition: opacity 0.7s ease;
     }
     .mask{
@@ -102,6 +103,11 @@ export default {
     @media screen and (min-width: 768px) and (max-width: 1024px){
         h1{
             font-size: 45px;
+        }
+    }
+    @media screen and (min-width: 1025px){
+        .sub-title{
+            font-size: 38px;
         }
     }
     

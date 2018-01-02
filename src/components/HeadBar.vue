@@ -2,6 +2,16 @@
     <div id="head-bar" :style="{top: top+'px', backgroundColor: color}">
         <div id="hbutton-contain" :class="{open: isOpen}">
             <slot></slot>
+            <div id="logo-contain" class="hidden-lg">
+                <div class="logo-block">
+                    <div class="logo">
+                        <a href="https://udn.com/news/index" target="_blank"><img src="https://udn.com/upf/newmedia/image/udn_logo_circle.png"></a>
+                    </div>
+                    <div class="logo">
+                        <a href="https://udn.com/upf/newmedia/udn_newmedia/" target="_blank"><img src="https://udn.com/upf/newmedia/image/nmd-logo.svg"></a>
+                    </div>
+                </div>
+            </div>
         </div>
         <div id="icon">
             <a href="."><img src="https://udn.com/upf/newmedia/2017_data/farewell/src/image/logo.png"></a>
@@ -61,6 +71,10 @@ export default {
 </script>
 
 <style scoped>
+    .logo{
+        width: 140px;
+        display: inline-block;
+    }
     #head-bar {
         position: fixed;
         background-color: #FFFFFF;
@@ -70,6 +84,7 @@ export default {
         left: 0;
         z-index: 99999;
         transition: opacity 0.7s ease;
+        box-shadow: -2.8px 1.1px 7px 0 rgba(4, 0, 0, 0.05);
     }
     #icon{
         position: absolute;
@@ -141,18 +156,20 @@ export default {
     }
     .hbutton{
         padding: 0 12px;
-        color: #000000;
+        color: #ACABAB;
         height: 50px;
         line-height: 50px;
         font-size: 16px;
         cursor: pointer;
         float: left;
     }
-    .hbutton:hover{	
-        background-color: #A5DEE4;
+    .hbutton:hover{
+        color: #FFFFFF;
+        background-color: #EF4326;
     }
     .hbutton.hbutton-select{
-        background-color: #A5DEE4;
+        background-color: #EF4326;
+        color: #FFFFFF;
     }
     @media screen and (max-width: 1024px){
         #head-bar{
@@ -181,8 +198,8 @@ export default {
         .hbutton {
             margin: 1px auto 0 auto;
             background-color: #FFFFFF;
-            color: #000000;
-            border-bottom: 1px solid #000000;
+            color: #ACABAB;
+            border-bottom: 1px solid #ACABAB;
             height: 60px;
             padding: 0;
             line-height: 60px;

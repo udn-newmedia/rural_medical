@@ -1,10 +1,14 @@
 <template>
   <div id="app">
     <Indicator color="#EF4326" />
-    <HeadBar />
+    <HeadBar buttonColor="#ACABAB">
+      <div class="hbutton" data-target="1">偏鄉就醫有多苦</div>
+			<div class="hbutton" data-target="2">你的家鄉安寧嗎</div>
+			<div class="hbutton" data-target="3">醫生病人相對論</div>
+    </HeadBar>
     <Cover :src="bg" :srcWeb="bg_web">
       <div id="cover-contain">
-        <h1>相同健保費<span class="hidden-md hidden-lg"><br/></span>看病命運大不同</h1>
+        <h1>相同健保費，<span class="hidden-md hidden-lg"><br/></span>看病命運大不同</h1>
         <div class="sub-title">地圖看台灣醫療資源</div>
         <div class="title-button"><i class="fa fa-angle-down"></i></div>
       </div>
@@ -22,10 +26,10 @@
         <p>偏鄉老年人口多，他們繳一樣的健保費卻無法享有相同的醫療資源。要滿足偏鄉醫療需求，需要的或許不是大醫院，而是能就近領藥、生病時有地方求助的安心所在。</p>
       </div>
       <br/>
-      <Share href="https://udn.com/upf/newmedia/2017_data/rural_medical/index.html" />
+      <Share href="https://udn.com/upf/newmedia/2018_data/rural_medical/index.html" />
       <br/>
     </ContentContainer>
-    <Section :src="section1" :srcWeb="section1_web" text="政府說醫療資源充足，你相信嗎？"/>
+    <Section id="section-1" :src="section1" :srcWeb="section1_web" text="政府說醫療資源充足，你相信嗎？"/>
     <div id="map-contain">
       <div id="map-say" :class="{show: mapSayShow}">
         <span class="circle2" :class="{hidden: mapMarkHidden2}"></span><span :class="{hidden: mapMarkHidden2}">{{mapmarks}}<br/></span><span class="circle" :class="{hidden: mapMarkHidden}"></span><span id="mapmark">{{mapmark}}</span><br/><br/>{{mapsay}}<br/>{{mapsource}}<br/>{{mapremark}}
@@ -39,11 +43,11 @@
       <div id="map-tooltip" :class="{show: tooltipShow}">
         <div class="tooltip-title">{{selectedCountry.location}}</div>
         <div id="tooltip-detail">
-          <div class="detail">人口數<span id="d1">{{selectedCountry.population}}人</span></div>
-          <div class="detail">老年人口數<span id="d2">{{selectedCountry.old}}人</span></div>
-          <div class="detail">醫院總數<span id="d3">{{selectedCountry.hospital}}家</span></div>
-          <div class="detail">每萬人口病床數<span id="d4">{{selectedCountry.beds}}床</span></div>
-          <div class="detail noborder">每萬人口執業醫事人口數<span id="d5">{{selectedCountry.employee}}人</span></div>
+          <div class="detail">人口數<span>{{selectedCountry.population}}人</span></div>
+          <div class="detail">老年人口數<span>{{selectedCountry.old}}人</span></div>
+          <div class="detail">醫院總數<span>{{selectedCountry.hospital}}家</span></div>
+          <div class="detail">每萬人口病床數<span>{{selectedCountry.beds}}床</span></div>
+          <div class="detail noborder">每萬人口執業醫事人口數<span>{{selectedCountry.employee}}人</span></div>
         </div>
       </div>
       <div id="map-tooltip-s" :class="{show: tooltipShow2}">
@@ -342,11 +346,10 @@
       2017年11月底，<a target="_blank" href="https://udn.com/news/plus/9734/2862448">苗栗縣公館一名張姓村長的兒子急病</a>，輾轉苗栗、新竹、台北醫院急救，5天後回天乏術，此事件凸顯苗栗緊急醫療資源不足問題。根據衛福部公布「緊急醫療資源不足」地區，轉換成鄉鎮市區於地圖上表示，<b>全國有141個鄉鎮市區缺乏緊急醫療資源，居民一旦發生突發中風、心肌梗塞、重大外傷等急重症，只能轉送其他地區，可能因此錯失黃金搶救時間</b>，有些人甚至途中就不幸死亡，轉診幾乎變成在賭命。
     </div>
     <div class="space"></div>
-    <div class="textbox">
-      <h2>衛福部：將加強偏鄉基礎醫療照顧</h2><br/>針對醫療不均問題，衛福部次長薛瑞元表示，醫療資源不均是必然，因為醫院經營有固定成本，但他曾在屏東擔任過衛生局長，深知偏鄉醫療的問題，「偏鄉醫療強度不足，明顯跟都會相比有差距。」尤其是重急症、慢性病，以急難災害的醫療能力都需要檢討改善。<br/><br/>他強調現下會先盤點各縣市的醫院功能，衛福部仍期待各縣市的當地醫院有一級醫院的能力，此外部分縣市因幅員遼闊，導致基礎醫療照顧能量不足，並且後送機制也有待重整改善。<br/><br/>薛瑞元表示，2018年會著重加強基礎醫療照顧，包括建立醫療人員派出模式，「老人、病人無法出門，我們醫院派人出去，這些在原鄉行之多年，非原鄉也要建立這種模式。」<br/><br/>此外，許多偏鄉人口老化，部分鄉鎮老年人口占比達20%以上，有領藥看病的需求。因此，他表示要強化前端預防工作，包括定期檢查、了解老人的服藥狀況等，避免老人家慢性病急性發作，2018年將在部分偏鄉試辦。
-    </div>
-    <div class="space-s"></div>
-    <Section :src="section2" :srcWeb="section2_web" text="臨終最後一哩路 你的家鄉安寧嗎？"/>
+    <ContentContainer background-color="#FFFFFF">
+      <h2>衛福部：將加強偏鄉基礎醫療照顧</h2><br/>針對醫療不均問題，衛福部次長薛瑞元表示，醫療資源不均是必然，因為醫院經營有固定成本，但他曾在屏東擔任過衛生局長，深知偏鄉醫療的問題，「偏鄉醫療強度不足，明顯跟都會相比有差距。」尤其是重急症、慢性病，以及急難災害的醫療能力都需要檢討改善。<br/><br/>他強調現下會先盤點各縣市的醫院功能，衛福部仍期待各縣市的當地醫院有一級醫院的能力，此外部分縣市因幅員遼闊，導致基礎醫療照顧能量不足，並且後送機制也有待重整改善。<br/><br/>薛瑞元表示，2018年會著重加強基礎醫療照顧，包括建立醫療人員派出模式，「老人、病人無法出門，我們醫院派人出去，這些在原鄉行之多年，非原鄉也要建立這種模式。」<br/><br/>此外，許多偏鄉人口老化，部分鄉鎮老年人口占比達20%以上，有領藥看病的需求。因此，他表示要強化前端預防工作，包括定期檢查、了解老人的服藥狀況等，避免老人家慢性病急性發作，2018年將在部分偏鄉試辦。
+    </ContentContainer>
+    <Section id="section-2" :src="section2" :srcWeb="section2_web" text="臨終最後一哩路 你的家鄉安寧嗎？"/>
     <div class="space" id="r-11"></div>
     <div class="textbox" id="r-12">
       <h2 class="hidden-xs hidden-sm">前5名「沙漠」縣市 6成以上鄉鎮區缺安寧資源</h2>
@@ -391,7 +394,9 @@
       <p><br/></p>
       <h2>三、我不是癌症，但也想好好走完人生最後一哩路</h2>
       <p><br/></p>
-      <div id="draw-1"></div>
+      <div id="draw-1">
+        <img class="lazyload hidden-md hidden-lg" :data-src="draw">
+      </div>
       <p><br/></p>
       <p>從數據中發現，不論是癌症或非癌病人，在過世前一個月使用安寧療護的比率都是逐年提升，但非癌病人利用率明顯偏低、成長緩慢。</p>
       <p><br/></p>
@@ -399,7 +404,7 @@
       <p><br/></p>
       <p>此外，非癌病人相較癌症病人，疾病病程變數較大，仰賴臨床判斷，觀念上也不太會連結到安寧。不過翁益強認為，所謂的「變數大」，其實反映了醫生也需要教育，早期癌症治療也很多人反彈安寧，但現在觀念已慢慢推廣，當醫生都有安寧療護的觀念，就更能判斷何時需要安寧療護介入、真正幫助病人。</p>
     </ContentContainer>
-    <Section :src="section3" :srcWeb="section3_web" text="醫生病人相對論：為什麼我們等不到彼此？"/>
+    <Section id="section-3" :src="section3" :srcWeb="section3_web" text="醫生病人相對論：為什麼我們等不到彼此？"/>
     <ContentContainer background-color="#FFFFFF">
       <h2>一、要看病，到底難在哪？</h2>
       <p><br/></p>
@@ -466,7 +471,8 @@
       <p>城鄉醫療資源分布不均，偏鄉地區民眾雖然繳一樣的健保費，但都市與偏鄉享受到的醫療資源卻不一樣。且偏鄉青年人口流失，很多獨居老人、老老照顧，加上多屬經濟弱勢，更加深偏鄉醫療困境。</p>
       <p><br/></p>
       <div class="img-contain">
-        <img src="./assets/3-1.jpg">
+        <img class="lazyload hidden-md hidden-lg" src="./assets/3-1.jpg">
+        <img class="lazyload hidden-xs hidden-sm" src="./assets/3-1_web.jpg">
       </div>
       <p><br/></p>
       <h2>二、好不容易看了病，拿藥也難</h2>
@@ -507,7 +513,8 @@
       <p><b>現在偏鄉地區大多靠社區藥局的藥師送藥到府，減少民眾往返醫院領藥的不便</b>。不像傳統藥師多半在藥局等待患者上門，這些「行動藥師」步出藥局，走進老人家和行動不便病人的家中，送上慢性處方籤和提供藥物諮詢服務。不過，藥師外出送藥都沒有額外收入，完全是靠熱心、志願性提供服務。</p>
       <p><br/></p>
       <div class="img-contain">
-        <img src="./assets/3-2.jpg">
+        <img class="lazyload hidden-md hidden-lg" src="./assets/3-2.jpg">
+        <img class="lazyload hidden-xs hidden-sm" src="./assets/3-2_web.jpg">
       </div>
       <p><br/></p>
       <h2>三、偏鄉醫療最需要的是什麼？</h2>
@@ -558,7 +565,7 @@
       <p><br/></p>
       <p>要讓醫師願意到偏鄉開業，就必須<b>提高給付，讓偏鄉醫師能夠生存，才能真正解決就醫可近性的問題</b>。偏鄉基層照護，包括檢查、用藥，只要診所能做，就應該按照醫院給付，甚至是提供更好的條件。或是有一些獎勵措施，例如願意到偏鄉開藥局，政府就幫忙付藥局租金，必須提供足夠誘因，這樣才有醫師願意做。</p>
       <p><br/></p>
-      <Share href="https://udn.com/upf/newmedia/2017_data/rural_medical/index.html"/>
+      <Share href="https://udn.com/upf/newmedia/2018_data/rural_medical/index.html"/>
       <Logo />
       <p><br/></p>
       <Editor>
@@ -568,9 +575,33 @@
         <div>網頁製作：鄭偉廷</div>
         <div>監製：董谷音、蔡幸怡</div>
         <div>2018.01.</div>
+        <a href="https://drive.google.com/drive/folders/1ct46pOKKLWETsLBMXwY0SugBVS2qqB8U" target="_blank"><div id="refer">原始資料來源</div></a>
       </Editor>
 			<p><br/></p>
-			<FBComment href="https://udn.com/upf/newmedia/2017_data/rural_medical/index.html" />
+      <p><br/></p>
+      <Question href="https://www.surveycake.com/s/KpQKN" text="填寫閱讀體驗問卷"/>
+      <p><br/></p>
+      <p><br/></p>
+      <Relate>
+				<a href="./wang.html" target="_blank" slot="relate-1">
+					<img class="lazyload" data-src="https://udn.com/upf/newmedia/image/projects/201712_taipei-railway-workshop.jpg"/>
+					<p>遷不走的火車職人魂 360VR看82歲的台北機廠</p>
+				</a>
+				<a href="./xie.html" target="_blank" slot="relate-2">
+					<img class="lazyload" data-src="https://udn.com/upf/newmedia/image/projects/201711_farewell.jpg"/>
+					<p>好好說再見 插畫記林杰樑走後1500天</p>
+				</a>
+				<a href="./ding.html" target="_blank" slot="relate-3">
+					<img class="lazyload" data-src="https://udn.com/upf/newmedia/image/projects/201710_ideal.jpg"/>
+					<p>人人90歲的時代 你想怎麼活？</p>
+				</a>
+				<a href="./check.html" target="_blank" slot="relate-4">
+					<img class="lazyload" data-src="https://udn.com/upf/newmedia/image/projects/201710_poverty.jpg"/>
+					<p>被遺忘的孩子 我8歲，我住貨櫃屋</p>
+				</a>
+			</Relate>
+      <p><br/></p>
+			<FBComment href="https://udn.com/upf/newmedia/2018_data/rural_medical/index.html" />
       <p><br/></p>
       <Foot/>
     </ContentContainer>
@@ -582,10 +613,11 @@
 import Cover from '@/components/CoverFixedBg'
 import Section from '@/components/Section'
 import HeadBar from '@/components/HeadBar'
+import Question from '@/components/Question'
 import { Indicator, ContentContainer, Quote, Share, Editor, Relate, FBComment, Foot, Logo } from 'udn-newmedia-vue-components'
 
 import bg from '@/assets/bg.jpg'
-import bg_web from '@/assets/bg_web.jpg'
+import bg_web from '@/assets/bg_web.png'
 
 import section1 from '@/assets/section1.jpg'
 import section2 from '@/assets/section2.jpg'
@@ -596,6 +628,8 @@ import section3_web from '@/assets/section3_web.jpg'
 
 import pharmacy1 from '@/assets/pharmacy1.png'
 import pharmacy2 from '@/assets/pharmacy2.png'
+
+import draw from '@/assets/draw.gif'
 
 var svg, circle, prj, path
 var pagePadding = 50
@@ -669,6 +703,7 @@ export default {
       section3_web: section3_web,
       pharmacy1: pharmacy1,
       pharmacy2: pharmacy2,
+      draw: draw,
       mapTranslate: {
         x: '0',
         y: '0'
@@ -757,6 +792,10 @@ export default {
         .attr('id', function(d){
           return d.properties.name
         })
+        .append('svg:title')
+          .text(function(d){
+            return d.properties.name
+          })
     })
 
     d3.json('./static/towns-64.json', function(data){
@@ -786,6 +825,10 @@ export default {
         .attr('id', function(d){
           return d.properties.name
         })
+        .append('svg:title')
+          .text(function(d){
+            return d.properties.name
+          })
     })
 
     d3.json('./static/towns-65.json', function(data){
@@ -815,6 +858,10 @@ export default {
         .attr('id', function(d){
           return d.properties.name
         })
+        .append('svg:title')
+          .text(function(d){
+            return d.properties.name
+          })
     })
 
     d3.json('./static/towns-66.json', function(data){
@@ -844,6 +891,10 @@ export default {
         .attr('id', function(d){
           return d.properties.name
         })
+        .append('svg:title')
+          .text(function(d){
+            return d.properties.name
+          })
     })
 
     d3.json('./static/towns-67.json', function(data){
@@ -873,6 +924,10 @@ export default {
         .attr('id', function(d){
           return d.properties.name
         })
+        .append('svg:title')
+          .text(function(d){
+            return d.properties.name
+          })
     })
 
     d3.json('./static/towns-68.json', function(data){
@@ -902,6 +957,10 @@ export default {
         .attr('id', function(d){
           return d.properties.name
         })
+        .append('svg:title')
+          .text(function(d){
+            return d.properties.name
+          })
     })
 
     d3.json('./static/towns-10002.json', function(data){
@@ -931,6 +990,10 @@ export default {
         .attr('id', function(d){
           return d.properties.name
         })
+        .append('svg:title')
+          .text(function(d){
+            return d.properties.name
+          })
     })
 
     d3.json('./static/towns-10004.json', function(data){
@@ -960,6 +1023,10 @@ export default {
         .attr('id', function(d){
           return d.properties.name
         })
+        .append('svg:title')
+          .text(function(d){
+            return d.properties.name
+          })
     })
 
     d3.json('./static/towns-10005.json', function(data){
@@ -989,6 +1056,10 @@ export default {
         .attr('id', function(d){
           return d.properties.name
         })
+        .append('svg:title')
+          .text(function(d){
+            return d.properties.name
+          })
     })
 
     d3.json('./static/towns-10007.json', function(data){
@@ -1018,6 +1089,10 @@ export default {
         .attr('id', function(d){
           return d.properties.name
         })
+        .append('svg:title')
+          .text(function(d){
+            return d.properties.name
+          })
     })
 
     d3.json('./static/towns-10008.json', function(data){
@@ -1047,6 +1122,10 @@ export default {
         .attr('id', function(d){
           return d.properties.name
         })
+        .append('svg:title')
+          .text(function(d){
+            return d.properties.name
+          })
     })
 
     d3.json('./static/towns-10009.json', function(data){
@@ -1076,6 +1155,10 @@ export default {
         .attr('id', function(d){
           return d.properties.name
         })
+        .append('svg:title')
+          .text(function(d){
+            return d.properties.name
+          })
     })
 
     d3.json('./static/towns-10010.json', function(data){
@@ -1105,6 +1188,10 @@ export default {
         .attr('id', function(d){
           return d.properties.name
         })
+        .append('svg:title')
+          .text(function(d){
+            return d.properties.name
+          })
     })
 
     d3.json('./static/towns-10013.json', function(data){
@@ -1134,6 +1221,10 @@ export default {
         .attr('id', function(d){
           return d.properties.name
         })
+        .append('svg:title')
+          .text(function(d){
+            return d.properties.name
+          })
     })
 
     d3.json('./static/towns-10014.json', function(data){
@@ -1163,6 +1254,10 @@ export default {
         .attr('id', function(d){
           return d.properties.name
         })
+        .append('svg:title')
+          .text(function(d){
+            return d.properties.name
+          })
     })
 
     d3.json('./static/towns-10015.json', function(data){
@@ -1192,6 +1287,10 @@ export default {
         .attr('id', function(d){
           return d.properties.name
         })
+        .append('svg:title')
+          .text(function(d){
+            return d.properties.name
+          })
     })
 
     d3.json('./static/towns-10016.json', function(data){
@@ -1221,6 +1320,10 @@ export default {
         .attr('id', function(d){
           return d.properties.name
         })
+        .append('svg:title')
+          .text(function(d){
+            return d.properties.name
+          })
     })
 
     d3.json('./static/towns-10017.json', function(data){
@@ -1250,6 +1353,10 @@ export default {
         .attr('id', function(d){
           return d.properties.name
         })
+        .append('svg:title')
+          .text(function(d){
+            return d.properties.name
+          })
     })
 
     d3.json('./static/towns-10018.json', function(data){
@@ -1279,6 +1386,10 @@ export default {
         .attr('id', function(d){
           return d.properties.name
         })
+        .append('svg:title')
+          .text(function(d){
+            return d.properties.name
+          })
     })
 
     d3.json('./static/towns-10020.json', function(data){
@@ -1308,6 +1419,10 @@ export default {
         .attr('id', function(d){
           return d.properties.name
         })
+        .append('svg:title')
+          .text(function(d){
+            return d.properties.name
+          })
     })
 
     d3.json("./static/counties.json", function(data){
@@ -1341,19 +1456,6 @@ export default {
         .attr('stroke', '#B5B5B6')
         .attr('stroke-opacity', '1')
         .attr('stroke-width', '0.5')
-        .on('mouseover', function(d){
-              $('#map-tooltip').css('opacity', '1')
-              $('.' + d.properties.name).css('stroke', '#000000')
-              $('#d1').text(country_data[d.properties.name]['population'])
-              $('#d2').text(country_data[d.properties.name]['old'])
-              $('#d3').text(country_data[d.properties.name]['hospital'])
-              $('#d4').text(country_data[d.properties.name]['bed'])
-              $('#d5').text(country_data[d.properties.name]['employee'])
-            })
-        .on('mouseleave', function(d){
-          $('.point').css('stroke', '')
-          $('#map-tooltip').css('opacity', '')
-        })
 
         svg.append('g')
         .append('path')
@@ -1421,6 +1523,21 @@ export default {
                   'class': 'road-text map1',
                 })
                 .text('106公里')
+
+            svg.append('text')
+                .attr({
+                  'x': 304,
+                  'y': 124,
+                  'class': 'road-text map4',
+                })
+                .text('6分')
+            svg.append('text')
+                .attr({
+                  'x': 314,
+                  'y': 134,
+                  'class': 'road-text map4',
+                })
+                .text('2.3公里')
 
             svg.append('text')
                 .attr({
@@ -1592,8 +1709,32 @@ export default {
       })
     })
 
+    setTimeout(() => {
+      $('.country').on('mouseenter', this.handleMouseEnter)
+      $('.country').on('mouseout', this.handleMouseOut)
+    }, 1000)
+
+    
+
   },
   methods: {
+    handleMouseOut: function(){
+      this.tooltipShow = false
+    },
+    handleMouseEnter: function(d){
+      for(var i = 0; i < this.main.length; i++){
+        if(this.main[i].location == d.currentTarget.id){
+          $('.point').css('stroke', 'none')
+          $('.' + this.main[i].location).css('stroke', '#000000')
+          this.selectedCountry = this.main[i]
+          break;
+        }
+      }
+      if(this.part2 != true){
+        this.tooltipShow = true
+      }
+      
+    },
     menuClick: function(d){
       if(d == 21 || d == 20){
         this.ext = true
@@ -1617,11 +1758,22 @@ export default {
       var currentH = window.pageYOffset
       var map = currentH - $('#map-contain').offset().top + window.innerHeight
       var transformPadding = 0
+      var webPadding = 0
       if(window.innerHeight < 800 && window.innerWidth > 1024){
         transformPadding = -40
       }
-      console.log(map)
-      console.log(currentH, $('#r-1').offset().top)
+
+      if(window.innerWidth > 1024){
+        webPadding = window.innerHeight / 2
+      }
+
+      $('.doctor-underline').each(function(){
+        if(currentH + window.innerHeight > $(this).offset().top){
+          $(this).addClass('max')
+        }
+        
+      })
+      console.log(currentH)
       if(map < window.innerHeight - 200){
         this.mapShow = false
         this.mapSelect = false
@@ -1638,6 +1790,10 @@ export default {
         $('.town').css('stroke-opacity', '0')
         circle.transition().attr({'r': 0})
         $('#svg-contain').css('z-index', '')
+        $('#map-board-ss').css('opacity', '')
+        $('#map-tooltip').css('z-index', '')
+        $('#map-say').css('z-index', '')
+        this.tooltipShow2 = false
       }
       else if(map >= window.innerHeight - 200 && map < window.innerHeight * 2){
         this.mapShow = true
@@ -1660,12 +1816,16 @@ export default {
         $('.point').css('fill', '')
         if(window.innerWidth > 1024){
           $('#svg-contain').css('z-index', '1')
+          $('#map-tooltip').css('z-index', '2')
+          $('#map-say').css('z-index', '2')
         }
         this.ext = false
         circle.transition().attr({'r': 2})
+        $('#map-board-ss').css('opacity', '')
+        this.tooltipShow2 = false
       }
 
-      if(currentH + window.innerHeight/2 >= $('#r-1').offset().top + pagePadding && currentH + window.innerHeight < $('#r-3').offset().top + pagePadding){
+      if(currentH + window.innerHeight/2 >= $('#r-1').offset().top + webPadding && currentH + window.innerHeight < $('#r-3').offset().top + pagePadding){
         this.mapShow = false
         this.mapSayShow = false
         this.mapSelect = false
@@ -1699,6 +1859,10 @@ export default {
         this.ext = false
         this.mapMarkHidden2 = true
         $('#svg-contain').css('z-index', '')
+        $('#map-board-ss').css('opacity', '')
+        $('#map-tooltip').css('z-index', '')
+        $('#map-say').css('z-index', '')
+        this.tooltipShow2 = false
       }
 
       if(currentH + window.innerHeight >= $('#r-3').offset().top + pagePadding && currentH + window.innerHeight < $('#r-4').offset().top + pagePadding){
@@ -1740,6 +1904,10 @@ export default {
         $('.map1').css('opacity', 1)
         this.ext = false
         this.mapMarkHidden2 = true
+        $('#map-board-ss').css('opacity', '')
+        $('#map-tooltip').css('z-index', '')
+        $('#map-say').css('z-index', '')
+        this.tooltipShow2 = false
       }
 
       if(currentH + window.innerHeight >= $('#r-4').offset().top + pagePadding && currentH + window.innerHeight < $('#r-5').offset().top + pagePadding){
@@ -1779,6 +1947,10 @@ export default {
         $('.map2').css('opacity', 1)
         this.ext = false
         this.mapMarkHidden2 = true
+        $('#map-board-ss').css('opacity', '')
+        $('#map-tooltip').css('z-index', '')
+        $('#map-say').css('z-index', '')
+        this.tooltipShow2 = false
       }
 
       if(currentH + window.innerHeight >= $('#r-5').offset().top + pagePadding && currentH + window.innerHeight < $('#r-6').offset().top + pagePadding){
@@ -1819,6 +1991,10 @@ export default {
         $('#臺北市').css('fill', '')
         this.ext = false
         this.mapMarkHidden2 = true
+        $('#map-board-ss').css('opacity', '')
+        $('#map-tooltip').css('z-index', '')
+        $('#map-say').css('z-index', '')
+        this.tooltipShow2 = false
       }
 
       if(currentH + window.innerHeight >= $('#r-6').offset().top + pagePadding && currentH + window.innerHeight < $('#r-7').offset().top + pagePadding){
@@ -1860,6 +2036,10 @@ export default {
         $('.pharmacy').css('fill-opacity', '')
         this.ext = false
         this.mapMarkHidden2 = true
+        $('#map-board-ss').css('opacity', '')
+        $('.country').css('pointer-events', '')
+        $('#map-say').css('z-index', '')
+        this.tooltipShow2 = false
       }
 
       if(currentH + window.innerHeight >= $('#r-7').offset().top + pagePadding && currentH + window.innerHeight < $('#r-8').offset().top + pagePadding){
@@ -1889,6 +2069,8 @@ export default {
         this.ext = true
         this.mapMarkHidden2 = true
         $('.circle').css('top', '')
+        $('#map-board-ss').css('opacity', '')
+        this.tooltipShow2 = false
       }
 
       if(currentH + window.innerHeight >= $('#r-9').offset().top + pagePadding && currentH + window.innerHeight < $('#r-10').offset().top + pagePadding){
@@ -1918,6 +2100,8 @@ export default {
         this.ext = true
         this.mapMarkHidden2 = false
         $('.circle').css('top', '41px')
+        $('#map-board-ss').css('opacity', '')
+        this.tooltipShow2 = false
       }
 
       if(currentH + window.innerHeight >= $('#r-10').offset().top + pagePadding && currentH + window.innerHeight < $('#r-11').offset().top + pagePadding){
@@ -1948,6 +2132,7 @@ export default {
         this.mapMarkHidden2 = true
         $('.circle').css('top', '')
         $('.circle2').css('background', '')
+        $('#map-board-ss').css('opacity', '')
       }
 
       if(currentH + window.innerHeight/2 >= $('#r-11').offset().top + pagePadding && currentH + window.innerHeight < $('#r-12').offset().top + pagePadding){
@@ -1977,6 +2162,8 @@ export default {
         this.ext = false
         this.mapMarkHidden2 = false
         $('.circle').css('top', '22px')
+        $('#map-board-ss').css('opacity', '')
+        this.tooltipShow2 = false
       }
 
       if(currentH + window.innerHeight/2 >= $('#r-12').offset().top + pagePadding && currentH + window.innerHeight < $('#r-13').offset().top + pagePadding){
@@ -2021,12 +2208,14 @@ export default {
           this.mapTranslate.x = '-63px'
           this.mapTranslate.y = Number(155 + transformPadding) + 'px'
           $('#map-board-ss').css('opacity', '1')
+          this.selectedCountry = this.main[19]
         }
         else{
           this.mapTranslate.x = '-113px'
           this.mapTranslate.y = '172px'
+          this.selectedCountry = this.main[1]
         }
-        this.selectedCountry = this.main[19]
+        
         $('.country').css('fill-opacity', '')
         $('.rich').css('fill-opacity', '1')
         $('#dessertNumber').css('color', '#26cad3')
@@ -2061,12 +2250,18 @@ export default {
     }
   },
   components: {
-    Indicator, HeadBar, Cover, ContentContainer, Quote, Section, Share, Editor, Relate, FBComment, Foot, Logo
+    Indicator, HeadBar, Cover, ContentContainer, Quote, Section, Share, Editor, Relate, FBComment, Foot, Logo, Question
   }
 }
 </script>
 
 <style>
+
+#refer{
+  color: #EF4326;
+  border-bottom: 2px solid #EF4326;
+  display: inline-block;
+}
 
 #leave{
   width: 79px;
@@ -2084,6 +2279,7 @@ export default {
 .title-button{
   font-size: 50px;
   width: 50px;
+  height: 50px;
   margin: auto;
 }
 
@@ -2114,7 +2310,7 @@ svg{
 }
 
 .doctor-underline{
-  width: 240px;
+  width: 0px;
   height: 10px;
   position: absolute;
   top: 25px;
@@ -2122,6 +2318,11 @@ svg{
   left: 50%;
   background: #EF4326;
   margin-left: -120px;
+  transition: all 0.7s ease;
+}
+
+.doctor-underline.max{
+  width: 240px;
 }
 
 .people{
@@ -2510,7 +2711,7 @@ svg{
 #map-board-ss{
   position: fixed;
   width: 300px;
-  left: 15%;
+  left: 30%;
   bottom: 47%;
   height: 215px;
   background: white;
@@ -2588,7 +2789,15 @@ svg{
   font-size: 26px;
 }
 
+#draw-1 img{
+  width: 100%;
+}
+
 @media screen and (min-width: 1024px){
+  
+  .people-name{
+    border-bottom: none;
+  }
   .textbox h2{
     font-size: 30px;
   }
@@ -2606,16 +2815,16 @@ svg{
     width: auto;
   }
   #svg-contain{
-    left: 15%;
+    left: 20%;
     top: 150px;
     height: 100%;
   }
   #map-board-s{
-    left: 15%;
+    left: 30%;
     margin-left: 0;
   }
   #map-board{
-    left: 15%;
+    left: 30%;
     margin-left: 0;
   }
   .zoomInBig{
@@ -2632,30 +2841,48 @@ svg{
     height: 0;
   }
   #map-tooltip{
-    left: 15%;
+    left: 30%;
   }
   #map-tooltip-s{
-    left: 15%;
+    left: 30%;
   }
   #map-select{
     left: 3%;
   }
   #cover-icon {
     width: 200px;
-    left: 200px;
+    left: 11%;
     transform: scale(-1, 1);
   }
   #cover #cover-contain{
     width: 700px;
-    left: 50%;
-    margin-left: -350px;
-    top: 35%;
+    left: 17%;
+    top: 30%;
   }
 }
 
-@media screen and (min-width: 1280px) and (max-height: 800px){
+@media screen and (min-width: 1280px) and (max-height: 900px){
   #svg-contain{
+    left: 10%;
     top: 50px;
+  }
+  #map-tooltip{
+    left: 23%;
+  }
+  #map-tooltip-s{
+    left: 23%;
+  }
+  #map-board-s{
+    bottom: 10%;
+    left: 20%;
+  }
+  #map-board {
+    bottom: 10%;
+    left: 20%;
+  }
+  #map-board-ss{
+    bottom: 41%;
+    left: 20%;
   }
 }
 
