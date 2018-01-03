@@ -26,6 +26,15 @@ $(document).ready(function(){
       renderer: 'svg',
       loop: false,
       autoplay: false,
+      path: './static/web/data.json'
+    })
+  }
+  else{
+    var draw = bodymovin.loadAnimation({
+      container: document.getElementById('draw-1'),
+      renderer: 'svg',
+      loop: false,
+      autoplay: false,
       path: './static/data.json'
     })
   }

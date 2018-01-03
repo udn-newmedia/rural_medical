@@ -5,7 +5,7 @@
             <div id="logo-contain" class="hidden-lg">
                 <div class="logo-block">
                     <div class="logo">
-                        <a href="https://udn.com/news/index" target="_blank"><img src="https://udn.com/upf/newmedia/image/udn_logo_circle.png"></a>
+                        <a href="https://udn.com/news/index" target="_blank"><img src="https://udn.com/upf/newmedia/image/udn-logo.svg"></a>
                     </div>
                     <div class="logo">
                         <a href="https://udn.com/upf/newmedia/udn_newmedia/" target="_blank"><img src="https://udn.com/upf/newmedia/image/nmd-logo.svg"></a>
@@ -14,7 +14,7 @@
             </div>
         </div>
         <div id="icon">
-            <a href="."><img src="https://udn.com/upf/newmedia/2017_data/farewell/src/image/logo.png"></a>
+            <a href="."><img src="https://udn.com/upf/newmedia/image/udn_logo_circle.png"></a>
         </div>
         <div id="hbutton" class="squre hidden-lg">
             <div id="nav-icon" :class="{open: isOpen}" @click="handleClick">
@@ -91,8 +91,8 @@ export default {
         top: 0;
     }
     #icon img {
-        width: 130px;
-        margin-top: -3px;
+        width: 40px;
+        margin-top: 0px;
         margin-left: 5px;
     }
     #hbutton{
@@ -180,9 +180,6 @@ export default {
             line-height: 46px;
             text-align: left;
             width: 100%;
-        }
-        #icon img{
-            margin-top: -9px;
         }
         #hbutton-contain{
             top: 46px;
