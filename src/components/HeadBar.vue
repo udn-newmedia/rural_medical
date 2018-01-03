@@ -91,8 +91,8 @@ export default {
         top: 0;
     }
     #icon img {
-        width: 40px;
-        margin-top: 0px;
+        width: 36px;
+        margin-top: -3px;
         margin-left: 5px;
     }
     #hbutton{
